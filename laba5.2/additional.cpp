@@ -3,7 +3,7 @@
 bool isValidName(string name) {
 	if (name[0] == ' ' || name[0] == '.')
 		return false;
-	for (int i = 1; i < name.length(); i++) {
+	for (int i = 0; i < name.length(); i++) {
 		if (name[i] >= 'A' && name[i] <= 'Z' || name[i] >= 'a' && name[i] <= 'z' || name[i] >= 'À' && name[i] <= 'ß' || name[i] >= 'à' && name[i] <= 'ÿ' ||
 			name[i] == ' ' || name[i] == '.')
 			continue;
@@ -17,9 +17,8 @@ bool isValidName(string name) {
 bool isInt(string user_num) {
 	for (int i = 0; i < user_num.length(); i++)
 		if (!isdigit(user_num[i])) {
-			cout << "Ââåäåíû íåêîððåêòíûå äàííûå" << endl;
+			cout << "Введено неверное число " << endl;
 			return false;
-			break;
 		}
 	return true;
 }
